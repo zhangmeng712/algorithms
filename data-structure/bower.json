@@ -1,0 +1,23 @@
+{
+    "name": "data-structure",
+    "version": "0.0.1",
+    "homepage": "https://github.com/zhangmeng712/algorithms",
+    "authors": [
+        "思霏 <sifei.zm@taobao.com>"
+    ],
+    "description": "jasmine test for data-structure",
+    "keywords": [
+        "jasmine",
+        "data-structure"
+    ],
+    "dependencies": {
+        "jasmine": ""
+    },
+    "componentsDirectory": "libs/",
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "node_modules",
+        "bower_components"
+    ]
+}
