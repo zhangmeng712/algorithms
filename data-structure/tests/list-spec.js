@@ -2,9 +2,7 @@
  * Created by zhangmeng on 14/11/23.
  * Test Class List
  */
-
 describe('List Tests', function () {
-
 
     var list = null;
     beforeEach(function(){

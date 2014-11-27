@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../libs/bower_components/jasmine/lib/jasmine-core/jasmine.css" />
+<script src="../libs/bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
+<script src="../libs/bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+
+</head>
+<body>
+<script>
+    (function() {
+        var jasmineEnv = jasmine.getEnv();
+        jasmineEnv.updateInterval = 1000;
+        var htmlReporter = new jasmine.HtmlReporter();
+        jasmineEnv.addReporter(htmlReporter);
+    })()
+</script>
+
+<script src="../src/List/list.js"></script>
+<script src="./list-spec.js"></script>
+<script>
+    jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>
