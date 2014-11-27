@@ -37,7 +37,7 @@ window.JDS = window.JDS || {};
     }
 
     /**
-     * Insert elem to particular pos
+     * Insert elem to after pos
      * @param elem
      * @param pos 0 - x
      */
@@ -78,7 +78,7 @@ window.JDS = window.JDS || {};
     function remove(elem) {
         var pos = this.find(elem);
         if (pos) {
-            this.splice(pos, 1);
+            this.dataStore.splice(pos, 1);
             this.listSize--;
         }
     }
@@ -115,14 +115,21 @@ window.JDS = window.JDS || {};
     function prev() {
         if (this.pos > 0) {
             this.pos = this.pos - 1;
+        } else {
+            this.pos = -1;
         }
     }
 
     function next() {
         if (this.pos < this.listSize - 1) {
             this.pos = this.pos + 1;
+        } else {
+            this.pos = this.listSize;//incase next could break out the  iterator loop
         }
+
     }
+
+
 
     function curPos() {
         return this.pos;
@@ -136,7 +143,9 @@ window.JDS = window.JDS || {};
         return this.listSize;
     }
 
-
+    /**
+     * the element in the pos
+     */
     function getElement() {
         return this.dataStore[this.pos];
     }
