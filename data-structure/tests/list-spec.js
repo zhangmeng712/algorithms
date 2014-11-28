@@ -57,12 +57,13 @@ describe('List Tests', function () {
 
 
     it('test iterator for the list', function () {
+        var start = new Date();
         var listNew = new JDS.List();
         for (list.front(); list.curPos() < list.length(); list.next()) {
             listNew.append(list.getElement() + 1);
         }
         expect(listNew.dataStore).toEqual([1,2,3,4,5,6,7,8,9,10]);
-
+        console.log('execute Time: ', new Date() - start , 'ms')
     });
 
 });

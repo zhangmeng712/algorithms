@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../../../data-structure/libs/bower_components/jasmine/lib/jasmine-core/jasmine.css" />
+    <script src="../../../data-structure/libs/bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
+    <script src="../../../data-structure/libs/bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+    <script src="../fib.js"></script>
+    <script src="fib-spec.js"></script>
+</head>
+<body>
+<script>
+    (function() {
+        var jasmineEnv = jasmine.getEnv();
+        jasmineEnv.updateInterval = 1000;
+        var htmlReporter = new jasmine.HtmlReporter();
+        jasmineEnv.addReporter(htmlReporter);
+    })()
+</script>
+
+<script>
+    jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>

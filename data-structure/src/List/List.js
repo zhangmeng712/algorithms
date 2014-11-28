@@ -12,7 +12,9 @@ window.JDS = window.JDS || {};
         this.insert = insert;
         this.clear = clear;
         this.remove = remove;
+
         this.find = find;
+
         this.toString = toString;
         this.length = length;
         this.getElement = getElement;
