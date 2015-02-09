@@ -8,7 +8,7 @@ var Fn = window.Fn || {};
     Fn.recurFib = recurFib;
     Fn.dynFib = dynFib;
 
-    //使用递归
+    //使用递归 O(n)
     function recurFib(n) {
         if (n < 2) {
             return n;

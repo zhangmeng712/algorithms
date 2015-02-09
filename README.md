@@ -1,25 +1,32 @@
 algorithms & Data Structure
 ==========
 
-##DataStructure
+## DataStructure & application
 
 - Array (Advanced Array method which fullfill with es5 and pollyfill)
 - List
 - Stack
+- Queue
+- Linkedlist
+- Set
+- Hash
 
 
-
-## Algorithm
+## Algorithm && Demos
 
 - Bags
 - Hannoi
+- Dijestra
+- Astar
+- searching
+- sort
+- encode
+- AI
 
+## reference
 
+- https://github.com/mgechev/javascript-algorithms
+- https://github.com/mauriciosantos/buckets/
+- https://github.com/nzakas/computer-science-in-javascript
+- https://code.google.com/p/crypto-js/#MD5
 
-## Test
-
-- located in tests files
-- using bower install to get jasmine (run in your own browser)
-- UT (totoro)
-    - install totoro by "npm install -g totoro"
-    - cd tests/ && totoro --code xxxx.js
