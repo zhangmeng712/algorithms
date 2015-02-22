@@ -4,6 +4,7 @@
  */
 
 /**
+ *  用法：
     http://jsfiddle.net/zhangmeng712/n03d6mfa/1/
     var ll = new window.SingleLinkedList();
     ll.insert('zhangmeng', 'head');

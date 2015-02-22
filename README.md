@@ -7,7 +7,7 @@ algorithms & Data Structure
 - List
 - Stack
 - Queue
-- Linkedlist
+- [LinkedList](data-structure/src/linked-list/README.md)
 - Set
 - Hash
 

@@ -26,8 +26,6 @@
 
 
 
-
-
 ## API
 
 - 插入 insert(newElem,elem)
@@ -36,10 +34,15 @@
 - 反向遍历 reverseDisplay()
 - 辅助方法 find(elem) findPrev(elem) (O(n)) findLast()
 
+## 实现
+- 单链表 [single-linked-list.js](single-linked-list.js)
+- 双向链表 [double-linked-list.js](double-linked-list.js)
+- 循环链表 [circular-linked-list.js](circular-linked-list.js)
+
 ## 应用
 
 - 链表用来构建许多其它数据结构，如堆栈，队列和他们的派生。（一维数组可以处理的问题）
-- 经典问题：约瑟夫斯问题 参见[josephus](josephus.js) 
+- 经典问题：约瑟夫斯问题 参见[josephus.js](example/josephus.js)
 
 
 ## 参考

@@ -2,9 +2,151 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>javascript数据结构和算法</title>
+    <title>数据结构和算法-javascript</title>
+    <link rel="shortcut icon" href="https://www.polymer-project.org/images/logos/p-logo-32.png">
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="bower_components/polymer/polymer.html">
+    <link rel="import" href="bower_components/core-field/core-field.html">
 </head>
 <body>
 
+<polymer-element name="metro-menu" >
+    <template>
+        <style>
+            *{
+                font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+                font-style: normal;font-weight: 300;font-size: 16px;color:white;-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+            }
+
+            .title{font-size:16px;position:absolute;bottom:10px;left:10px; }
+            .caption{position:absolute;top:10px;left:10px;right:10px}
+            .menu-item{color:whitesmoke;padding:5px;}
+
+            .small{min-width:25%; height:125px}
+            .large{min-width:43%;height:125px;}
+
+            .big{height:60px;width:60px;}
+
+            .YELLOW{background-color:#FFCA28}
+            .INDIGO{background-color:#5C6BC0}
+            .ORANGE{background-color:#FF7043}
+            .BLUE{background-color:#0086D4}
+            .LIGHTBLUE{background-color:#26C6DA}
+            .GREEN{background-color:#9CCC65}
+            .PINK{background-color:#EC407A}
+            .purple{background-color:#AB47BC}
+
+            .flip {-webkit-perspective: 1000;position: relative;}
+            .card {width: 100%; height: 100%; transform-style: preserve-3d; transition: 0.45s;position: relative;box-shadow:         1px 1px 4px 0px rgba(50, 50, 50, 0.18);}
+            .face {width: 100%; height: 100%;  backface-visibility: hidden;}
+            .front {position: absolute;z-index: 1;}
+            .back {transform:rotatex(-180deg);z-index: 2;}
+            .flip:hover .card{transform:rotatex(-180deg);}
+
+            .clickable a{position:absolute;top:0;left:0;width:100%;height:100%;z-index:9999;cursor:pointer;}
+        </style>
+
+
+
+        <div horizontal around-justified layout wrap>
+
+            <div class="menu-item small flip " horizontal layout flex >
+                <div class="card PINK">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="cloud" flex self-center></core-icon>
+                        <label  class="title" self-start>Cloud</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >Access your files in the cloud</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+
+            <div class="menu-item large flip" horizontal layout flex >
+                <div class="card GREEN ">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="event" flex self-center></core-icon>
+                        <label  class="title"  self-start>Schedule</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >Manage and create schedules</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+
+            <div class="menu-item small flip" horizontal layout flex >
+                <div class="card INDIGO ">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="account-balance" flex self-center></core-icon>
+                        <label class="title" self-start>Billing</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >View and submit payroll</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+
+            <div class="menu-item small flip" horizontal layout flex >
+                <div class="card YELLOW ">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="settings" flex self-center></core-icon>
+                        <label class="title" self-start>Settings</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >Manage administrative application settings</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+
+            <div class="menu-item small flip" horizontal layout flex >
+                <div class="card ORANGE ">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="supervisor-account" flex self-center></core-icon>
+                        <label class="title" self-start>Clients</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >Add and edit client information</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+
+            <div class="menu-item large flip" horizontal layout flex >
+                <div class="card BLUE  ">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="assessment" flex self-center></core-icon>
+                        <label class="title" self-start>Reports</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >View and create reports</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+
+            <div class="menu-item small flip" horizontal layout flex >
+                <div class="card LIGHTBLUE">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="account-box" flex self-center></core-icon>
+                        <label class="title" self-start>Account</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >Manage your account information</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+
+            <div class="menu-item small flip" horizontal layout flex >
+                <div class="card purple">
+                    <core-field vertical layout flex class="front face">
+                        <core-icon class="big" icon="schedule" flex self-center></core-icon>
+                        <label class="title" self-start>Time Tracking</label>
+                    </core-field>
+                    <div class="back face"><label class="caption" self-start >Administer time tracking information for employees</label></div>
+                </div>
+                <div class="clickable"><a href="http:\\www.google.com" target="_blank"></a></div>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        Polymer('metro-menu', {})
+    </script>
+</polymer-element>
+
+<div class="wrap">
+    <metro-menu></metro-menu>
+</div>
 </body>
 </html>
