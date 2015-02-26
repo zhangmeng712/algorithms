@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>迷宫问题-栈应用</title>
+</head>
+<body>
+<h1>迷宫问题</h1>
+<blockquote>求迷宫问题就是求出从入口到出口的路径。在求解时,通常用的是 “穷举求解”的方法,即从入口出发,顺某一方向向前试探,若能走通,则继续往前走；否则沿原路退回,换一个方向再继续试探,直至所有可能的通路都试探完为止。为了保证在任何位置上都能沿原路退回(称为回溯),需要用一个后进先出的栈来保存从入口到当前位置的路径。</blockquote>
+<div id="container"></div>
+<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+<script src="../stack.js"></script>
+<script src="maze.js"></script>
+<script>
+    var maze = new Maze(15,15);
+    maze.draw('#container');
+    maze.showPath();
+</script>
+</body>
+</html>

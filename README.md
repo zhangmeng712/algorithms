@@ -5,9 +5,9 @@ algorithms & Data Structure
 
 - Array (Advanced Array method which fullfill with es5 and pollyfill)
 - List
-- Stack
+-[Stack](data-structure/src/stack/)
 - Queue
-- [LinkedList](data-structure/src/linked-list/README.md)
+- [LinkedList](data-structure/src/linked-list/)
 - Set
 - Hash
 
